@@ -10,7 +10,7 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  region: "us-east"
+  region: "us-east-2"
   app: "frontendasdevops"
   env: "Frontendasdevops-env"
   bucket_name: "elasticbeanstalk-us-east-2-309026106143"
