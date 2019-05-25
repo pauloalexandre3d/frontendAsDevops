@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t pauloalexandre3d/frontendAsDevops -f Dockerfile.dev .
+  - docker build -t pauloalexandre3d/frontendasdevops -f Dockerfile.dev .
 
 script:
-  - docker run pauloalexandre3d/frontendAsDevops npm run test -- --coverage
+  - docker run pauloalexandre3d/frontendasdevops npm run test -- --coverage
