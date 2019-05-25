@@ -6,4 +6,4 @@ before_install:
   - docker build -t pauloalexandre3d/frontendasdevops -f Dockerfile.dev .
 
 script:
-  - docker run pauloalexandre3d/frontendasdevops npm run test -- --coverage
+  - docker run -e CI=true pauloalexandre3d/frontendasdevops npm run test
