@@ -8,15 +8,21 @@ before_install:
 script:
   - docker run -e CI=true pauloalexandre3d/frontendasdevops npm run test
 
-deploy:
-  provider: elasticbeanstalk
-  region: "us-east-2"
-  app: "frontendasdevops"
-  env: "Frontendasdevops-env"
-  bucket_name: "elasticbeanstalk-us-east-2-309026106143"
-  bucket_path: "frontendasdevops"
-  on:
-    branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: "$AWS_SECRET_KEY"
+# AWS
+# deploy:
+#   provider: elasticbeanstalk
+#   region: "us-east-2"
+#   app: "frontendasdevops"
+#   env: "Frontendasdevops-env"
+#   bucket_name: "elasticbeanstalk-us-east-2-309026106143"
+#   bucket_path: "frontendasdevops"
+#   on:
+#     branch: master
+#   access_key_id: $AWS_ACCESS_KEY
+#   secret_access_key:
+#     secure: "$AWS_SECRET_KEY"
+
+# deploy:
+#   provider: heroku
+#   api_key:
+#     secure: "YOUR ENCRYPTED API KEY"
